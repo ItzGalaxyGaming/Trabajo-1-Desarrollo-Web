@@ -10,6 +10,7 @@
     <!-- Seccion Puntaje -->
      <center>
         <div id="puntaje">
+        <p class="tituloPuntaje" >Puntaje total: <span class="puntaje-total"></span> </p>
 
         </div>
      </center>
@@ -19,24 +20,39 @@
     <center>
         <div class="setCartas">
             <div id="carta1">
+              <!--p>Numero de carta: <span class="numero-carta"></span></p-->  
                 <img src="https://previews.123rf.com/images/snezh/snezh1710/snezh171000106/87521139-juego-completo-de-cartas-de-p%C3%B3ker-de-cuatro-colores-de-dise%C3%B1o-cl%C3%A1sico.jpg" alt="carta1" class="tamañoCarta">
-                <span class="estiloBoton" onclick="cambiarCantidadCarta(1)">+</span>
+                <span class="estiloBoton" onclick="cambiarCantidadCarta(1, 1)">+</span>
                 <span class="estiloBoton" id="cantidadCarta">0</span>
-                <span class="estiloBoton" onclick="cambiarCantidadCarta(-1)">-</span>
+                <span class="estiloBoton" onclick="cambiarCantidadCarta(-1, 1)">-</span>
             </div>
 
-            <div id="carta1">
+            <div id="carta2">
                 <img src="https://previews.123rf.com/images/snezh/snezh1710/snezh171000106/87521139-juego-completo-de-cartas-de-p%C3%B3ker-de-cuatro-colores-de-dise%C3%B1o-cl%C3%A1sico.jpg" alt="carta1" class="tamañoCarta">
-                <span class="estiloBoton" onclick="cambiarCantidadCarta(1)">+</span>
-                <span class="estiloBoton" id="cantidadCarta">0</span>
-                <span class="estiloBoton" onclick="cambiarCantidadCarta(-1)">-</span>
+                <span class="estiloBoton2" onclick="cambiarCantidadCarta(1, 2)">+</span>
+                <span class="estiloBoton2" id="cantidadCarta2">0</span>
+                <span class="estiloBoton2" onclick="cambiarCantidadCarta(-1, 2)">-</span>
             </div>
             
-            <div id="carta1">
+            <div id="carta3">
                 <img src="https://previews.123rf.com/images/snezh/snezh1710/snezh171000106/87521139-juego-completo-de-cartas-de-p%C3%B3ker-de-cuatro-colores-de-dise%C3%B1o-cl%C3%A1sico.jpg" alt="carta1" class="tamañoCarta">
-                <span class="estiloBoton" onclick="cambiarCantidadCarta(1)">+</span>
-                <span class="estiloBoton" id="cantidadCarta">0</span>
-                <span class="estiloBoton" onclick="cambiarCantidadCarta(-1)">-</span>
+                <span class="estiloBoton" onclick="cambiarCantidadCarta(1, 3)">+</span>
+                <span class="estiloBoton" id="cantidadCarta3">0</span>
+                <span class="estiloBoton" onclick="cambiarCantidadCarta(-1, 3)">-</span>
+            </div>
+
+            <div id="carta4">
+                <img src="https://previews.123rf.com/images/snezh/snezh1710/snezh171000106/87521139-juego-completo-de-cartas-de-p%C3%B3ker-de-cuatro-colores-de-dise%C3%B1o-cl%C3%A1sico.jpg" alt="carta1" class="tamañoCarta">
+                <span class="estiloBoton" onclick="cambiarCantidadCarta(1 , 4)">+</span>
+                <span class="estiloBoton" id="cantidadCarta4">0</span>
+                <span class="estiloBoton" onclick="cambiarCantidadCarta(-1, 4)">-</span>
+            </div>
+
+            <div id="carta5">
+                <img src="https://previews.123rf.com/images/snezh/snezh1710/snezh171000106/87521139-juego-completo-de-cartas-de-p%C3%B3ker-de-cuatro-colores-de-dise%C3%B1o-cl%C3%A1sico.jpg" alt="carta1" class="tamañoCarta">
+                <span class="estiloBoton" onclick="cambiarCantidadCarta(1, 5)">+</span>
+                <span class="estiloBoton" id="cantidadCarta5">0</span>
+                <span class="estiloBoton" onclick="cambiarCantidadCarta(-1, 5)">-</span>
             </div>
         </div>
     </center>
