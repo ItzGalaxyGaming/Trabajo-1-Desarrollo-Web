@@ -1,0 +1,47 @@
+body
+{
+    background-color: #35654d;
+}
+
+#puntaje
+{
+    padding: 300px;
+}
+
+#setCartas
+{
+    display: flex;
+    padding: 5%;
+    gap: 1%;
+}
+
+#carta1
+{
+    width: 200px;
+}
+
+.tamañoCarta
+{
+    min-width: 25px;
+    max-width: 150px;
+
+    margin: 10px;
+}
+
+.estiloBoton
+{
+    /* Tamaño del boton */
+    min-width: 30px;
+    height: 25px;
+    background-color: #c0c0c0;
+    
+    /* Espacio muerto izquierda y derecha */
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* Estilo del borde */
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #777777;
+}
