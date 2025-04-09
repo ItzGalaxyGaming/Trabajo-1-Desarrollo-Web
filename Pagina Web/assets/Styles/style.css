@@ -5,11 +5,13 @@ body
 
 #puntaje
 {
-    padding: 300px;
+    border: 100px;
 
 }
 .tituloPuntaje
 {
+    font-size: 100px;
+
     padding: 5%;
     gap: 1%;
 }
@@ -21,29 +23,11 @@ body
     gap: 4%;
 }
 
-#carta1
+.carta
 {
     width: 200px;
-}
 
-#carta2
-{
-    width: 200px;
-}
-
-#carta3
-{
-    width: 200px;
-}
-
-#carta4
-{
-    width: 200px;
-}
-
-#carta5
-{
-    width: 200px;
+    filter: drop-shadow(5px -5px 5px black);
 }
 
 .tamañoCarta
@@ -53,13 +37,11 @@ body
     margin: 10px;
 }
 
-
 .estiloBoton
 {
     /* Tamaño del boton */
     min-width: 30px;
     height: 25px;
-    background-color: #c0c0c0;
     
     /* Espacio muerto izquierda y derecha */
     padding-left: 15px;
@@ -70,23 +52,8 @@ body
     border-width: 2px;
     border-style: solid;
     border-color: #777777;
-}
 
-.estiloBoton2
-{
-    /* Tamaño del boton */
-    min-width: 30px;
-    height: 25px;
+    /* Estilo del boton */
     background-color: #c0c0c0;
-    
-    /* Espacio muerto izquierda y derecha */
-    padding-left: 15px;
-    padding-right: 15px;
-
-    /* Estilo del borde */
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #777777;
 }
 

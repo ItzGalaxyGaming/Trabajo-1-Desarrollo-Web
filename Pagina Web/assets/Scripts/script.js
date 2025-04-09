@@ -1,9 +1,58 @@
 
-let cartaNumero = [Math.floor(Math.random()* 10)+ 1,Math.floor(Math.random()* 10) +1,Math.floor(Math.random()* 10) +1,Math.floor(Math.random()* 10) +1,Math.floor(Math.random()* 10) +1]; 
+let cartaNumero = [
+    Math.floor(Math.random()* 10) + 1,
+    Math.floor(Math.random()* 10) + 1,
+    Math.floor(Math.random()* 10) + 1,
+    Math.floor(Math.random()* 10) + 1,
+    Math.floor(Math.random()* 10) + 1
+]; 
 
-let puntajeCarta = [0, 0, 0, 0, 0]
+let puntajeCarta = [0, 0, 0, 0, 0];
 
+let cartaImg = [
+    document.getElementById("cartaImg1"),
+    document.getElementById("cartaImg2"),
+    document.getElementById("cartaImg3"),
+    document.getElementById("cartaImg4"),
+    document.getElementById("cartaImg5")
+];
 
+for(var i = 0; i < cartaNumero.length; i++)
+{
+    switch(cartaNumero[i])
+    {
+        case 1:
+            cartaImg[i].src = "assets/Images/Carta1.png";
+            break;
+        case 2:
+            cartaImg[i].src = "assets/Images/Carta2.png";
+            break;
+        case 3:
+            cartaImg[i].src = "assets/Images/Carta3.png";
+            break;
+        case 4:
+            cartaImg[i].src = "assets/Images/Carta4.png";
+            break;
+        case 5:
+            cartaImg[i].src = "assets/Images/Carta5.png";
+            break;
+        case 6:
+            cartaImg[i].src = "assets/Images/Carta6.png";
+            break;
+        case 7:
+            cartaImg[i].src = "assets/Images/Carta7.png";
+            break;
+        case 8:
+            cartaImg[i].src = "assets/Images/Carta8.png";
+            break;
+        case 9:
+            cartaImg[i].src = "assets/Images/Carta9.png";
+            break;
+        case 10:
+            cartaImg[i].src = "assets/Images/Carta10.png";
+            break;
+    }
+}
 
 var cantidadCarta = document.querySelector("#cantidadCarta");
 var cantidadCartaNum = Number(cantidadCarta.innerHTML);
@@ -22,7 +71,6 @@ var cantidadCartaNum5 = Number(cantidadCarta5.innerHTML);
 
 function cambiarCantidadCarta(cantidad, carta)
 {
-    
     switch(carta)
     {
         case 1:
@@ -70,11 +118,7 @@ function cambiarCantidadCarta(cantidad, carta)
             cantidadCarta5.innerHTML = cantidadCartaNum5;
             calculoPuntajeCarta(carta);
             break;
-
     }
-
-    
-    
 }
 
 function calculoPuntajeCarta(carta)
@@ -82,11 +126,9 @@ function calculoPuntajeCarta(carta)
     switch(carta)
     {
         case 1:
-
             puntajeCarta[0] = Number(cartaNumero[Number(carta) -1]) * Number(cantidadCartaNum) 
             break;
         case 2:
-
             puntajeCarta[1] = Number(cartaNumero[Number(carta) -1]) * Number(cantidadCartaNum2) 
             break;
         case 3:
