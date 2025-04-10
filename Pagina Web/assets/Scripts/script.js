@@ -57,39 +57,72 @@ for(var i = 0; i < cartaNumero.length; i++)
     }
 }
 
-// Lee la cantidad de cartas que se juega cada una
-let cantidadCarta = [
-    document.querySelector("#cantidadCarta"),
-    document.querySelector("#cantidadCarta2"),
-    document.querySelector("#cantidadCarta3"),
-    document.querySelector("#cantidadCarta4"),
-    document.querySelector("#cantidadCarta5")
-]
+// Lee la cantidad de cartas que se juega cada una y los transforma la cantidad de texto a numero
+var cantidadCarta = document.querySelector("#cantidadCarta");
+var cantidadCartaNum = Number(cantidadCarta.innerHTML);
 
-// Transforma la cantidad de texto a numero
-let cantidadCartaNum = [
-    Number(cantidadCarta[0].innerHTML),
-    Number(cantidadCarta[1].innerHTML),
-    Number(cantidadCarta[2].innerHTML),
-    Number(cantidadCarta[3].innerHTML),
-    Number(cantidadCarta[4].innerHTML)
-]
+var cantidadCarta2 = document.querySelector("#cantidadCarta2");
+var cantidadCartaNum2 = Number(cantidadCarta2.innerHTML);
+
+var cantidadCarta3 = document.querySelector("#cantidadCarta3");
+var cantidadCartaNum3 = Number(cantidadCarta3.innerHTML);
+
+var cantidadCarta4 = document.querySelector("#cantidadCarta4");
+var cantidadCartaNum4 = Number(cantidadCarta4.innerHTML);
+
+var cantidadCarta5 = document.querySelector("#cantidadCarta5");
+var cantidadCartaNum5 = Number(cantidadCarta5.innerHTML);
 
 // Funcion que cambia la cantidad de cartas que se juega por la carta que se jugo, si el resultado es menor que 0 este lo transforma 0
 function cambiarCantidadCarta(cantidad, carta)
 {
-    for(var i = 0; i < cartaNumero.length; i++)
+    switch(carta)
     {
-        if(carta = i + 1)
-        {
-            cantidadCartaNum[i] = cantidadCartaNum[i] + Number(cantidad);
-            if(cantidadCartaNum[i] < 0)
+        case 1:
+            cantidadCartaNum = cantidadCartaNum + Number(cantidad);
+            if(cantidadCartaNum < 0)
             {
-                cantidadCartaNum[i] = 0;
+                cantidadCartaNum = 0;
             }
-            cantidadCarta[i].innerHTML = cantidadCartaNum[i];
+            cantidadCarta.innerHTML = cantidadCartaNum;
             calculoPuntajeCarta(carta);
-        }
+            break;
+        case 2:
+            cantidadCartaNum2 = cantidadCartaNum2 + Number(cantidad);
+            if(cantidadCartaNum2 < 0)
+                {
+                    cantidadCartaNum2 = 0;
+                }
+            cantidadCarta2.innerHTML = cantidadCartaNum2;
+            calculoPuntajeCarta(carta);
+            break;
+        case 3:
+            cantidadCartaNum3 = cantidadCartaNum3 + Number(cantidad);
+            if(cantidadCartaNum3 < 0)
+                {
+                    cantidadCartaNum3 = 0;
+                }
+            cantidadCarta3.innerHTML = cantidadCartaNum3;
+            calculoPuntajeCarta(carta);
+            break;
+        case 4:
+            cantidadCartaNum4 = cantidadCartaNum4 + Number(cantidad);
+            if(cantidadCartaNum4 < 0)
+                {
+                    cantidadCartaNum4 = 0;
+                }
+            cantidadCarta4.innerHTML = cantidadCartaNum4;
+            calculoPuntajeCarta(carta);
+            break;
+        case 5:
+            cantidadCartaNum5 = cantidadCartaNum5 + Number(cantidad);
+            if(cantidadCartaNum5 < 0)
+                {
+                    cantidadCartaNum5 = 0;
+                }
+            cantidadCarta5.innerHTML = cantidadCartaNum5;
+            calculoPuntajeCarta(carta);
+            break;
     }
 }
 
