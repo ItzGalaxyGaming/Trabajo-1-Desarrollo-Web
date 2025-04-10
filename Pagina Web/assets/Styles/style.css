@@ -3,17 +3,19 @@ body
     background-color: #35654d;
 }
 
-#puntaje
-{
-    border: 100px;
-
-}
 h1
 {
     font-size:70px;
     padding: 2%;
     gap: 1%;
 }
+
+#puntaje
+{
+    border: 100px;
+    align-items: center;
+}
+
 .tituloPuntaje
 {
     font-size: 100px;

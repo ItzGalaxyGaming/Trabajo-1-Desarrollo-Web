@@ -1,4 +1,4 @@
-
+// Asigna un numero aleatorio (del 1 al 10) a cada carta de la mano
 let cartaNumero = [
     Math.floor(Math.random()* 10) + 1,
     Math.floor(Math.random()* 10) + 1,
@@ -7,8 +7,10 @@ let cartaNumero = [
     Math.floor(Math.random()* 10) + 1
 ]; 
 
+// Puntaje de cada carta en mano
 let puntajeCarta = [0, 0, 0, 0, 0];
 
+// Lee las ids de cada carta en mano
 let cartaImg = [
     document.getElementById("cartaImg1"),
     document.getElementById("cartaImg2"),
@@ -17,6 +19,7 @@ let cartaImg = [
     document.getElementById("cartaImg5")
 ];
 
+// Revisa el numero de cada carta para asignarle su respectiva imagen
 for(var i = 0; i < cartaNumero.length; i++)
 {
     switch(cartaNumero[i])
@@ -54,73 +57,43 @@ for(var i = 0; i < cartaNumero.length; i++)
     }
 }
 
-var cantidadCarta = document.querySelector("#cantidadCarta");
-var cantidadCartaNum = Number(cantidadCarta.innerHTML);
+// Lee la cantidad de cartas que se juega cada una
+let cantidadCarta = [
+    document.querySelector("#cantidadCarta"),
+    document.querySelector("#cantidadCarta2"),
+    document.querySelector("#cantidadCarta3"),
+    document.querySelector("#cantidadCarta4"),
+    document.querySelector("#cantidadCarta5")
+]
 
-var cantidadCarta2 = document.querySelector("#cantidadCarta2");
-var cantidadCartaNum2 = Number(cantidadCarta2.innerHTML);
+// Transforma la cantidad de texto a numero
+let cantidadCartaNum = [
+    Number(cantidadCarta[0].innerHTML),
+    Number(cantidadCarta[1].innerHTML),
+    Number(cantidadCarta[2].innerHTML),
+    Number(cantidadCarta[3].innerHTML),
+    Number(cantidadCarta[4].innerHTML)
+]
 
-var cantidadCarta3 = document.querySelector("#cantidadCarta3");
-var cantidadCartaNum3 = Number(cantidadCarta3.innerHTML);
-
-var cantidadCarta4 = document.querySelector("#cantidadCarta4");
-var cantidadCartaNum4 = Number(cantidadCarta4.innerHTML);
-
-var cantidadCarta5 = document.querySelector("#cantidadCarta5");
-var cantidadCartaNum5 = Number(cantidadCarta5.innerHTML);
-
+// Funcion que cambia la cantidad de cartas que se juega por la carta que se jugo, si el resultado es menor que 0 este lo transforma 0
 function cambiarCantidadCarta(cantidad, carta)
 {
-    switch(carta)
+    for(var i = 0; i < cartaNumero.length; i++)
     {
-        case 1:
-            cantidadCartaNum = cantidadCartaNum + Number(cantidad);
-            if(cantidadCartaNum < 0)
+        if(carta = i + 1)
+        {
+            cantidadCartaNum[i] = cantidadCartaNum[i] + Number(cantidad);
+            if(cantidadCartaNum[i] < 0)
             {
-                cantidadCartaNum = 0;
+                cantidadCartaNum[i] = 0;
             }
-            cantidadCarta.innerHTML = cantidadCartaNum;
+            cantidadCarta[i].innerHTML = cantidadCartaNum[i];
             calculoPuntajeCarta(carta);
-            break;
-        case 2:
-            cantidadCartaNum2 = cantidadCartaNum2 + Number(cantidad);
-            if(cantidadCartaNum2 < 0)
-                {
-                    cantidadCartaNum2 = 0;
-                }
-            cantidadCarta2.innerHTML = cantidadCartaNum2;
-            calculoPuntajeCarta(carta);
-            break;
-        case 3:
-            cantidadCartaNum3 = cantidadCartaNum3 + Number(cantidad);
-            if(cantidadCartaNum3 < 0)
-                {
-                    cantidadCartaNum3 = 0;
-                }
-            cantidadCarta3.innerHTML = cantidadCartaNum3;
-            calculoPuntajeCarta(carta);
-            break;
-        case 4:
-            cantidadCartaNum4 = cantidadCartaNum4 + Number(cantidad);
-            if(cantidadCartaNum4 < 0)
-                {
-                    cantidadCartaNum4 = 0;
-                }
-            cantidadCarta4.innerHTML = cantidadCartaNum4;
-            calculoPuntajeCarta(carta);
-            break;
-        case 5:
-            cantidadCartaNum5 = cantidadCartaNum5 + Number(cantidad);
-            if(cantidadCartaNum5 < 0)
-                {
-                    cantidadCartaNum5 = 0;
-                }
-            cantidadCarta5.innerHTML = cantidadCartaNum5;
-            calculoPuntajeCarta(carta);
-            break;
+        }
     }
 }
 
+// Calcula el puntaje total de la carta jugada multiplicando los puntos que da con la cantidad que se va a jugar
 function calculoPuntajeCarta(carta)
 {
     switch(carta)
@@ -145,13 +118,14 @@ function calculoPuntajeCarta(carta)
     calculo();
 }
 
-
+// Calcula el puntaje total sumando el puntaje de cada carta
 function calculo()
 {
     total = puntajeCarta[0] + puntajeCarta[1] + puntajeCarta[2] + puntajeCarta[3] + puntajeCarta[4]
     mostrar()
 }
 
+// Pasa el puntaje total hacia el texto para mostrarlo en el web
 function mostrar()
 {
     let resultado = document.querySelector(".puntaje-total")
