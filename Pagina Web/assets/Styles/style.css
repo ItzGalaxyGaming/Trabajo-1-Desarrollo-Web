@@ -27,8 +27,8 @@ h1
 .setCartas
 {
     display: flex;
-    padding: 10%;
-    gap: 4%;
+    padding: 15%;
+    gap:8%;
 }
 
 .carta
